@@ -54,13 +54,11 @@ int main() {
     printf("Enter Expression : ");
     scanf("%s", expr);
     
-    // Fixed: Loop through the string until the null terminator
     for (int i = 0; expr[i] != '\0'; i++) {
         if (expr[i] == '(' || expr[i] == '{' || expr[i] == '[') {
             push(expr[i]);
         }
         else if (expr[i] == ')' || expr[i] == '}' || expr[i] == ']') {
-            // Fixed: Check if stack is empty OR if the popped bracket does NOT match
             if (TOP == -1 || !isMatching(pop(), expr[i])) {
                 balance = 0;
                 break;
@@ -68,7 +66,6 @@ int main() {
         }
     }
     
-    // Fixed: If stack is not empty at the end, there are unclosed brackets
     if (TOP != -1) {
         balance = 0;
     }
