@@ -154,7 +154,7 @@ void display() {
         printf("%d -> ", temp->data);
         temp = temp->next;
     } while (temp != head);
-    printf("(head)\n");
+    printf(" \n");
 }
 
 int main() {
