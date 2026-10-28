@@ -90,7 +90,7 @@ int main() {
     enqueue(3);
     enqueue(4);
     display();
-    
+
     dequeue();
     dequeue();
     display(); 
