@@ -61,7 +61,6 @@ int main() {
     push(5);
     display();
     push(6);
-    
     pop();
     pop();
     pop();
@@ -69,6 +68,5 @@ int main() {
     pop();
     display(); 
     pop();
-    
     return 0;
 }
