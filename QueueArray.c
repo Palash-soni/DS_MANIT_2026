@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 
 #define SIZE 5
@@ -55,9 +54,12 @@ void enqueue(int val){
 
 void dequeue(){
     if(isEmpty()) return;
-
     printf("deleted : %d\n",queue[front]);
     front++;
+    if(front>rear){
+        front=-1;
+        rear=-1;
+    }
 }
 
 int main(){
